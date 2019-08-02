@@ -79,11 +79,17 @@ $("#bttnDisplay").on("click", ".gifBttn", function () {
                     // create a div for the gif
                     var gifDiv = $('<div>');
 
+                    // add class for formatting
+                    gifDiv.addClass("gif");
+
                     // store the rating of the gif
                     var rating = results[i].rating;
 
                     // create a P with the results rating
                     var p = $('<p>').text('Rating: ' + rating);
+
+                    // Create Title
+                    var h =$('<p>').text(results[i].title);
 
                     // Create img tag
                     var img = $('<img>');
@@ -106,8 +112,10 @@ $("#bttnDisplay").on("click", ".gifBttn", function () {
                     img.addClass('gif');
 
                     // Append the rating and image to the div
-                    gifDiv.append(p);
+                    // gifDiv.append(h);
                     gifDiv.append(img);
+                    gifDiv.append(p);
+
 
                     // Append the Gif to the HTML Page
                     $('#gifDisplay').append(gifDiv);
